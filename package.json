@@ -1,0 +1,32 @@
+{
+  "name": "accounts-receivable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "open": "parcel src/index.html -p 3000 --open",
+    "start": "npm run open",
+    "clean": "rm -rf dist/*",
+    "build:parcel": "parcel build src/index.html",
+    "build": "npm run clean && npm run build:parcel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pvrbek/Accounts-Receivable.git"
+  },
+  "author": "Petar Vrbek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pvrbek/Accounts-Receivable/issues"
+  },
+  "homepage": "https://github.com/pvrbek/Accounts-Receivable#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "node-sass": "^4.14.1",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "js": "^0.1.0"
+  }
+}

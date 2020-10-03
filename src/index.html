@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Accounts Receivable App</title>
+    <link rel="icon" type="image/png" href="./icons/favicon.ico"/>
+    <link rel="stylesheet" href="./scss/styles.scss"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet">
+</head>
+<header class="box-shadow">
+    <div class="header-container container">
+        <div class="header__wrapper">
+            <div class="logo">
+                <img src="./images/infobip-seeklogo.com.png" alt="Infobip logo">
+            </div>
+            <div class="text"><h1></h1></div>
+            <div class="text"><h1>Accounts Receivable Dashboard</h1></div>
+        </div>
+    </div>
+</header>
+<body>
+<div class="filter-container container box-shadow">
+    <div class="filter-wrapper input-style">
+        <form class="filter">
+            <div class="filter__main">
+                <div class="filter__search">
+                    <div class="input-wrapper">
+                        <label for="company">
+                            Company</label>
+                        <input type="text" placeholder="Company name" id="company">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="customer">
+                            Customer</label>
+                        <input type="text" placeholder="Customer name or ID" id="customer">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="year">
+                            Fiscal year</label>
+                        <select name="year" id="year">
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter__documents">
+                    <div class="input-wrapper">
+                        <label for="doc-number">
+                            Document number</label>
+                        <input type="text" placeholder="Document number" id="doc-number">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="doc">
+                            Document type</label>
+                        <select name="doc" id="doc">
+                            <option value="proforma">Proforma Invoice</option>
+                            <option value="invoice">Invoice</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="more">
+                <button class="more-button" id="more-button" type="button">Additional filters</button>
+            </div>
+            <div class="filter__secondary">
+                <div class="filter__secondary--container">
+                    <div class="input-wrapper">
+                        <label for="status">
+                            Document status</label>
+                        <select name="status" id="status">
+                            <option value="paid">Paid</option>
+                            <option value="late">Late</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="bank">
+                            Bank name</label>
+                        <select name="bank" id="bank">
+                            <option value="raif">Raiffeisen</option>
+                            <option value="hypo">Hypo</option>
+                            <option value="barcl">Barclays</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="start-date">
+                            Start date</label>
+                        <input type="date" id="start-date" name="start-date">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="end-date">
+                            End date</label>
+                        <input type="date" id="end-date" name="end-date">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="amount-min">
+                            Min amount</label>
+                        <input type="number" placeholder="Min amount" id="amount-min">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="amount-max">
+                            Max amount</label>
+                        <input type="number" placeholder="Max amount" id="amount-max">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="currency">
+                            Currency</label>
+                        <select name="currency" id="currency">
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">EUR</option>
+                            <option value="HRK">EUR</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="due">
+                            Due in</label>
+                        <select name="due" id="due">
+                            <option value="0">today</option>
+                            <option value="1530">15-30</option>
+                            <option value="3060">30-60</option>
+                            <option value="6090">60-90</option>
+                            <option value="90120">90-120</option>
+                            <option value="120">over 120</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="service">
+                            Service</label>
+                        <select name="service" id="service">
+                            <option value="EUR">SMS</option>
+                            <option value="GBP">Voice</option>
+                            <option value="HRK">Viber</option>
+                            <option value="HRK">WhatsApp</option>
+                            <option value="HRK">Other</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="paid">
+                            Is Paid</label>
+                        <input type="checkbox" id="paid">
+                    </div>
+                </div>
+            </div>
+            <div class="submit">
+                <button id="submit-filter" class="btn submit" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="list-container small-container">
+    <div class="input-wrapper">
+        <label for="rows">
+            Rows per page</label>
+        <select name="rows" id="rows">
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+    </div>
+    <div class="list-header">
+        <ul>
+            <li>Document status</li>
+            <li>Document number</li>
+            <li>Company</li>
+            <li>Customer</li>
+            <li>Service</li>
+            <li>Amount</li>
+            <li>Currency</li>
+            <li>Document type</li>
+            <li>Bank name</li>
+            <li>Date created</li>
+            <li>Due in</li>
+            <li class="options">Options</li>
+        </ul>
+    </div>
+    <div class="list-body">
+        <ul>
+            <li class="list-row box-shadow-small">
+                <div class="data">
+                    <p contenteditable="false">Paid</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">123456</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">IB Croatia</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">HT</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">SMS</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">100</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">HRK</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">Invoice</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">ZABA</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">10.09.2020.</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">15-30</p>
+                </div>
+                <div class="data menu">
+                    <label class="label-options" for="options">
+                        <div class="icon-container"></div>
+                    </label>
+                    <input type="checkbox" class="options" id="options">
+                    <div class="menu-box box-shadow">
+                        <p class="edit">Edit</p>
+                    </div>
+                </div>
+            </li>
+            <li class="list-row box-shadow-small">
+                <div class="data">
+                    <p contenteditable="false">Paid</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">123456</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">IB Croatia</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">HT</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">SMS</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">100</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">HRK</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">Invoice</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">ZABA</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">10.09.2020.</p>
+                </div>
+                <div class="data">
+                    <p contenteditable="false">15-30</p>
+                </div>
+                <div class="data menu">
+                    <label class="label-options" for="options2">
+                        <div class="icon-container"></div>
+                    </label>
+                    <input type="checkbox" class="options" id="options2">
+                    <div class="menu-box box-shadow">
+                        <p class="edit">Edit</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="list-footer">
+        <div class="pagination-wrapper">
+            <div class="pagination">
+                <a class="prev page-numbers" href="javascript:;">prev</a>
+                <a aria-current="page" class="page-numbers current">1</a>
+                <a class="page-numbers" href="javascript:;">2</a>
+                <a class="page-numbers" href="javascript:;">3</a>
+                <a class="page-numbers" href="javascript:;">...</a>
+                <a class="page-numbers" href="javascript:;">10</a>
+                <a class="next page-numbers" href="javascript:;">next</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./index.js" type="module"></script>
+</body>
+</html>

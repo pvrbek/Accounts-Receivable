@@ -1,0 +1,46 @@
+header, body, div, h1, h2, h3, p, span {
+  font-family: $text-font-family;
+  color: $main-text-color;
+}
+
+/*Input style*/
+label {
+  display: block;
+}
+
+input,
+select {
+  display: block;
+  margin-top: 5px;
+  height: 37px;
+}
+/*Box shadow*/
+.box-shadow {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.23);
+}
+.box-shadow-small:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.23);
+}
+/*Elements container*/
+.container {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 768px) {
+      width: 750px;
+  }
+  @media (min-width: 992px) {
+      width: 970px;
+  }
+  @media (min-width: 1200px) {
+      width: 1170px;
+  }
+}
+.small-container {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 3%;
+  margin-left: 3%;
+}

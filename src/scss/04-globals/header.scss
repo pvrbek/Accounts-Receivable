@@ -1,0 +1,35 @@
+header {
+  position: relative;
+  background-color: $element-color;
+  h1 {
+    display: inline-block;
+    margin: 0;
+    line-height: 100px;
+    font-size: $big-text-size;
+    font-weight: 400;
+  }
+  .header-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .header__wrapper {
+    display: flex;
+    margin: 0;
+    position: relative;
+    height: 105px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .text {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+  }
+  &.box-shadow {
+    box-shadow: 0 1px 10px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
+
+    @media screen and (max-width: 468px){
+    box-shadow: none;
+    }
+  }
+}

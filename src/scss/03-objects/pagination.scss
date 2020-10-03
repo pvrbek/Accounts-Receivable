@@ -1,0 +1,36 @@
+.pagination-wrapper {
+       text-align: center;
+       margin: 40px 0;
+}
+
+.pagination {
+       display: inline-block;
+       height: 50px;
+       margin-top: 10px;
+       padding: 0 25px;
+       border-radius: 35px;
+       background-color: $element-color;
+}
+
+.page-numbers {
+       display: block;
+       padding: 0 20px;
+       float: left;
+       transition: 0.4s ease;
+       color: $main-text-color;
+       font-size: 20px;
+       letter-spacing: 0.1em;
+       line-height: 50px;
+       text-decoration: none;
+       &:hover,
+       &.current {
+              background-color: $infobip-color;
+              color: $infobip-text-color;
+       }
+
+       &.prev:hover,
+       &.next:hover {
+              background-color: transparent;
+              color: $infobip-color;
+       }
+}

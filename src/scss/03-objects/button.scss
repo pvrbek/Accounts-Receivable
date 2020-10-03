@@ -1,0 +1,67 @@
+button {
+  cursor: pointer;
+  font-family: $text-font-family;
+  &.btn {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    padding: 15px;
+    min-width: 150px;
+    font-weight: bold;
+    font-size: $normal-text-size;
+  }
+
+  &.submit {
+    background-color: $infobip-color;
+    color: $infobip-text-color;
+
+    &:hover {
+      background-color: $element-color;
+      color: $infobip-color;
+      border: 2px solid $infobip-color;
+    }
+  }
+
+  &.more-button {
+    position: relative;
+    border: 1px solid transparent;
+    background-color: white;
+    font-size: $bigger-text-size;
+    outline: none;
+    padding-left: 10px;
+    &:before {
+      content:"";
+      display: inline-block;
+      position: absolute;
+      left: -11px;
+      top: 8px;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 10px solid $infobip-color;
+
+      -webkit-transition-duration: 0.5s;
+      -moz-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+    }
+
+    &:hover {
+      color: $infobip-color;
+    }
+    &.open {
+      color: $infobip-color;
+
+      &:before {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+      }
+    }
+  }
+}
