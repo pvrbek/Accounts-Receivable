@@ -1,4 +1,4 @@
-# Accounts-Receivable upute za pokretanje:
+# Accounts-Receivable starting guide:
 
 1. Clone the project
 2. Position to root of cloned document in CMD (or some other command interpreter) and run "npm install" 
