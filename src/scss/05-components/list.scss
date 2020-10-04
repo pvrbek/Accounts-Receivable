@@ -4,8 +4,37 @@
     list-style: none;
     padding: 0;
   }
+  .upper-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    .buttons {
+      text-align: center;
+      button {
+        &.save {
+          margin-right: 15px;
+          background-color: $infobip-color;
+          color: $infobip-text-color;
+          &:hover {
+            background-color: $element-color;
+            color: $infobip-color;
+            border: 2px solid $infobip-color;
+          }
+        }
+        &.reset {
+          border: 2px solid $infobip-color;
+          background-color: $element-color;
+          &:hover {
+            background-color: $element-color;
+            color: $infobip-color;
+          }
+        }
+      }
+    }
+  }
 
   .list-header {
+    padding-left: 6px;
     ul {
       display: flex;
 
@@ -15,6 +44,8 @@
         padding-left: 20px;
         overflow: hidden;
         white-space: nowrap;
+        font-size: $small-text-size;
+
         &.options {
           text-align: center;
         }
@@ -35,18 +66,36 @@
 
         }
 
+        .status {
+          width: 6px;
+          height: 100%;
+
+          &.paid {
+            background-color: $paid;
+          }
+          &.late {
+            background-color: $late;
+          }
+        }
+
         .data {
           width: 7.5%;
           padding-left: 20px;
           overflow: hidden;
+
           p {
             white-space: nowrap;
+            margin-right: 1px;
+            font-size: $small-text-size;
+            line-height: 25px;
           }
+
           &.menu {
             position: relative;
             padding: 0;
             margin-left: 20px;
             overflow: visible;
+
             .label-options {
               position: absolute;
               height: 28px;
@@ -60,6 +109,7 @@
               transform: translate(-50%, -50%);
 
               &:hover {
+                background-color: $infobip-color;
               }
 
               .icon-container {
@@ -87,12 +137,12 @@
                 position: absolute;
                 width: auto;
                 height: auto;
-                top: 50px;
-                left: 14px;
-                background-color: $infobip-color;
+                top: 90%;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
                 z-index: 999;
                 border-radius: 6px;
-
                 &:after {
                   content: '';
                   position: absolute;
@@ -102,7 +152,7 @@
                   border-right: 8px solid transparent;
                   border-bottom: 8px solid $infobip-color;
                   top: -8px;
-                  right: 23px;
+                  right: 37px;
                 }
               }
             }
@@ -111,11 +161,14 @@
               opacity: 0;
               height: 0;
               overflow: hidden;
-
-              p {
+              .edit,
+              .details {
+                display: block;
                 margin: 0;
                 padding: 8px 20px;
+                background-color: $infobip-color;
                 color: $infobip-text-color;
+                text-align: center;
                 cursor: pointer;
                 -webkit-touch-callout: none; /* iOS Safari */
                 -webkit-user-select: none; /* Safari */
@@ -123,8 +176,21 @@
                 -moz-user-select: none; /* Old versions of Firefox */
                 -ms-user-select: none; /* Internet Explorer/Edge */
                 user-select: none;
-                /* Non-prefixed version, currently
-                                                 supported by Chrome, Edge, Opera and Firefox */
+
+                &:hover {
+                  background-color: $secondary-color;
+                  color: $infobip-text-color;
+                }
+              }
+
+              .edit {
+                border-top-left-radius: 6px ;
+                border-top-right-radius: 6px ;
+                border-bottom: 1px solid $light-orange;
+              }
+              .details {
+                border-bottom-left-radius: 6px ;
+                border-bottom-right-radius: 6px ;
               }
             }
           }

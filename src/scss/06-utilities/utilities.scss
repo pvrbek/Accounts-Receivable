@@ -14,6 +14,11 @@ select {
   margin-top: 5px;
   height: 37px;
 }
+[contenteditable] {
+  &:focus {
+    outline: 1px solid $infobip-color;
+  }
+}
 /*Box shadow*/
 .box-shadow {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.23);
