@@ -16,21 +16,37 @@
 
 button {
   cursor: pointer;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  outline: none;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none; }
   button.btn {
     border: 2px solid transparent;
     border-radius: 4px;
-    padding: 15px;
-    min-width: 150px;
-    font-weight: bold;
     font-size: 16px; }
   button.submit {
     background-color: #FF5A00;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    padding: 15px;
+    min-width: 150px;
+    font-weight: bold; }
     button.submit:hover {
       background-color: #FFFFFF;
       color: #FF5A00;
       border: 2px solid #FF5A00; }
+  button[disabled] {
+    opacity: 0.5;
+    cursor: auto;
+    pointer-events: none; }
   button.more-button {
     position: relative;
     border: 1px solid transparent;
@@ -76,7 +92,8 @@ button {
 .input-style input[type="time"],
 .input-style input[type="url"],
 .input-style textarea,
-.input-style select {
+.input-style select,
+.input-style datalist {
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
   -ms-transition: all 0.30s ease-in-out;
@@ -103,13 +120,78 @@ button {
 .input-style input[type="time"]:focus,
 .input-style input[type="url"]:focus,
 .input-style textarea:focus,
-.input-style select:focus {
+.input-style select:focus,
+.input-style datalist:hover {
   box-shadow: 0 0 5px #FF5A00;
   padding: 8px;
   border: 1px solid #FF5A00; }
 
+.input-style .custom {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .input-style .custom input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+  .input-style .custom:hover input ~ .checkmark {
+    background-color: #FF5A00; }
+  .input-style .custom input:checked ~ .checkmark {
+    background-color: #FF5A00; }
+  .input-style .custom input:checked ~ .checkmark:after {
+    display: block; }
+  .input-style .custom .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee; }
+    .input-style .custom .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none; }
+  .input-style .custom .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
+.input-style .checkbox-container {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-top: 4px; }
+
 select {
   cursor: pointer; }
+
+.rows {
+  display: flex;
+  justify-content: center; }
+  .rows label {
+    line-height: 21px;
+    padding-right: 10px;
+    font-size: 14px;
+    color: gray; }
+  .rows select {
+    margin: 0;
+    outline: none;
+    border: none;
+    height: 25px; }
 
 .pagination-wrapper {
   text-align: center;
@@ -129,7 +211,7 @@ select {
   float: left;
   transition: 0.4s ease;
   color: #000000;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 0.1em;
   line-height: 50px;
   text-decoration: none; }
@@ -200,6 +282,7 @@ body {
       flex-wrap: wrap;
       justify-content: space-between; }
       .filter-container .filter-wrapper .filter__secondary--container .input-wrapper {
+        position: relative;
         margin-right: 0;
         flex: 0 49%; }
   .filter-container .filter-wrapper .filter-wrapper label {
@@ -224,16 +307,40 @@ body {
   list-style: none;
   padding: 0; }
 
-.list-container .list-header ul {
-  display: flex; }
-  .list-container .list-header ul li {
-    width: 7.5%;
-    text-align: left;
-    padding-left: 20px;
-    overflow: hidden;
-    white-space: nowrap; }
-    .list-container .list-header ul li.options {
-      text-align: center; }
+.list-container .upper-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px; }
+  .list-container .upper-header .buttons {
+    text-align: center; }
+    .list-container .upper-header .buttons button.save {
+      margin-right: 15px;
+      background-color: #FF5A00;
+      color: #FFFFFF; }
+      .list-container .upper-header .buttons button.save:hover {
+        background-color: #FFFFFF;
+        color: #FF5A00;
+        border: 2px solid #FF5A00; }
+    .list-container .upper-header .buttons button.reset {
+      border: 2px solid #FF5A00;
+      background-color: #FFFFFF; }
+      .list-container .upper-header .buttons button.reset:hover {
+        background-color: #FFFFFF;
+        color: #FF5A00; }
+
+.list-container .list-header {
+  padding-left: 6px; }
+  .list-container .list-header ul {
+    display: flex; }
+    .list-container .list-header ul li {
+      width: 7.5%;
+      text-align: left;
+      padding-left: 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 14px; }
+      .list-container .list-header ul li.options {
+        text-align: center; }
 
 .list-container .list-body ul li {
   height: 53px;
@@ -241,12 +348,22 @@ body {
   display: flex;
   background-color: #FFFFFF;
   margin-bottom: 10px; }
+  .list-container .list-body ul li .status {
+    width: 6px;
+    height: 100%; }
+    .list-container .list-body ul li .status.paid {
+      background-color: #27ae60; }
+    .list-container .list-body ul li .status.late {
+      background-color: #e74c3c; }
   .list-container .list-body ul li .data {
     width: 7.5%;
     padding-left: 20px;
     overflow: hidden; }
     .list-container .list-body ul li .data p {
-      white-space: nowrap; }
+      white-space: nowrap;
+      margin-right: 1px;
+      font-size: 14px;
+      line-height: 25px; }
     .list-container .list-body ul li .data.menu {
       position: relative;
       padding: 0;
@@ -263,6 +380,8 @@ body {
         left: 50%;
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%); }
+        .list-container .list-body ul li .data.menu .label-options:hover {
+          background-color: #FF5A00; }
         .list-container .list-body ul li .data.menu .label-options .icon-container {
           position: relative; }
           .list-container .list-body ul li .data.menu .label-options .icon-container:before {
@@ -282,9 +401,10 @@ body {
           position: absolute;
           width: auto;
           height: auto;
-          top: 50px;
-          left: 14px;
-          background-color: #FF5A00;
+          top: 90%;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
           z-index: 999;
           border-radius: 6px; }
           .list-container .list-body ul li .data.menu .options:checked + .menu-box:after {
@@ -296,15 +416,19 @@ body {
             border-right: 8px solid transparent;
             border-bottom: 8px solid #FF5A00;
             top: -8px;
-            right: 23px; }
+            right: 37px; }
       .list-container .list-body ul li .data.menu .menu-box {
         opacity: 0;
         height: 0;
         overflow: hidden; }
-        .list-container .list-body ul li .data.menu .menu-box p {
+        .list-container .list-body ul li .data.menu .menu-box .edit,
+        .list-container .list-body ul li .data.menu .menu-box .details {
+          display: block;
           margin: 0;
           padding: 8px 20px;
+          background-color: #FF5A00;
           color: #FFFFFF;
+          text-align: center;
           cursor: pointer;
           -webkit-touch-callout: none;
           /* iOS Safari */
@@ -316,9 +440,18 @@ body {
           /* Old versions of Firefox */
           -ms-user-select: none;
           /* Internet Explorer/Edge */
-          user-select: none;
-          /* Non-prefixed version, currently
-                                                 supported by Chrome, Edge, Opera and Firefox */ }
+          user-select: none; }
+          .list-container .list-body ul li .data.menu .menu-box .edit:hover,
+          .list-container .list-body ul li .data.menu .menu-box .details:hover {
+            background-color: #000000;
+            color: #FFFFFF; }
+        .list-container .list-body ul li .data.menu .menu-box .edit {
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+          border-bottom: 1px solid coral; }
+        .list-container .list-body ul li .data.menu .menu-box .details {
+          border-bottom-left-radius: 6px;
+          border-bottom-right-radius: 6px; }
 
 header, body, div, h1, h2, h3, p, span {
   font-family: "Open Sans", sans-serif;
@@ -333,6 +466,9 @@ select {
   display: block;
   margin-top: 5px;
   height: 37px; }
+
+[contenteditable]:focus {
+  outline: 1px solid #FF5A00; }
 
 /*Box shadow*/
 .box-shadow {

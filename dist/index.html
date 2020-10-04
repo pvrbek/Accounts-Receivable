@@ -27,14 +27,24 @@
             <div class="filter__main">
                 <div class="filter__search">
                     <div class="input-wrapper">
-                        <label for="company">
-                            Company</label>
-                        <input type="text" placeholder="Company name" id="company">
+                        <label for="company-name">Company</label>
+                        <input type="text" list="company" id="company-name" name="company-name" placeholder="Search for Company">
+
+                        <datalist id="company">
+                            <option value="Infobip China">
+                            </option><option value="Infobip Croatia">
+                            </option><option value="Infobip USA">
+                        </option></datalist>
                     </div>
                     <div class="input-wrapper">
-                        <label for="customer">
-                            Customer</label>
-                        <input type="text" placeholder="Customer name or ID" id="customer">
+                        <label for="customer-name">Company</label>
+                        <input type="text" list="customer" id="customer-name" name="customer-name" placeholder="Search for Customer">
+
+                        <datalist id="customer">
+                            <option value="HT">
+                            </option><option value="A1">
+                            </option><option value="WhatsApp">
+                        </option></datalist>
                     </div>
                     <div class="input-wrapper">
                         <label for="year">
@@ -138,9 +148,12 @@
                         </select>
                     </div>
                     <div class="input-wrapper">
-                        <label for="paid">
-                            Is Paid</label>
-                        <input type="checkbox" id="paid">
+                        <div class="checkbox-container">
+                            <label class="custom">Is paid
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -151,14 +164,20 @@
     </div>
 </div>
 <div class="list-container small-container">
-    <div class="input-wrapper">
-        <label for="rows">
-            Rows per page</label>
-        <select name="rows" id="rows">
-            <option value="25">25</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-        </select>
+    <div class="upper-header">
+        <div class="input-wrapper rows">
+            <label for="rows">
+                Rows per page</label>
+            <select name="rows" id="rows">
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </div>
+        <div class="input-wrapper buttons">
+            <button class="btn save" type="button" disabled="">Save changes</button>
+            <button class="btn reset" type="button">Reset to default</button>
+        </div>
     </div>
     <div class="list-header">
         <ul>
@@ -177,40 +196,42 @@
         </ul>
     </div>
     <div class="list-body">
-        <ul>
+        <ul class="list-data">
             <li class="list-row box-shadow-small">
-                <div class="data">
-                    <p contenteditable="false">Paid</p>
+                <div class="status">
                 </div>
                 <div class="data">
-                    <p contenteditable="false">123456</p>
+                    <p class="info ispaid" contenteditable="false">Paid</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">IB Croatia</p>
+                    <p class="info" contenteditable="false">123456</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">HT</p>
+                    <p class="info" contenteditable="false">IB Croatia</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">SMS</p>
+                    <p class="info" contenteditable="false">HT</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">100</p>
+                    <p class="info" contenteditable="false">SMS</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">HRK</p>
+                    <p class="info" contenteditable="false">100</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">Invoice</p>
+                    <p class="info" contenteditable="false">HRK</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">ZABA</p>
+                    <p class="info" contenteditable="false">Invoice</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">10.09.2020.</p>
+                    <p class="info" contenteditable="false">ZABA</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">15-30</p>
+                    <p class="info" contenteditable="false">10.09.2020.</p>
+                </div>
+                <div class="data">
+                    <p class="info" contenteditable="false">15-30</p>
                 </div>
                 <div class="data menu">
                     <label class="label-options" for="options">
@@ -219,42 +240,45 @@
                     <input type="checkbox" class="options" id="options">
                     <div class="menu-box box-shadow">
                         <p class="edit">Edit</p>
+                        <a class="details">Details</a>
                     </div>
                 </div>
             </li>
             <li class="list-row box-shadow-small">
-                <div class="data">
-                    <p contenteditable="false">Paid</p>
+                <div class="status">
                 </div>
                 <div class="data">
-                    <p contenteditable="false">123456</p>
+                    <p class="info ispaid" contenteditable="false">Late</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">IB Croatia</p>
+                    <p class="info" contenteditable="false">123456</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">HT</p>
+                    <p class="info" contenteditable="false">IB Croatia</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">SMS</p>
+                    <p class="info" contenteditable="false">HT</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">100</p>
+                    <p class="info" contenteditable="false">SMS</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">HRK</p>
+                    <p class="info" contenteditable="false">100</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">Invoice</p>
+                    <p class="info" contenteditable="false">HRK</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">ZABA</p>
+                    <p class="info" contenteditable="false">Invoice</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">10.09.2020.</p>
+                    <p class="info" contenteditable="false">ZABA</p>
                 </div>
                 <div class="data">
-                    <p contenteditable="false">15-30</p>
+                    <p class="info" contenteditable="false">10.09.2020.</p>
+                </div>
+                <div class="data">
+                    <p class="info" contenteditable="false">15-30</p>
                 </div>
                 <div class="data menu">
                     <label class="label-options" for="options2">
@@ -263,6 +287,7 @@
                     <input type="checkbox" class="options" id="options2">
                     <div class="menu-box box-shadow">
                         <p class="edit">Edit</p>
+                        <a class="details">Details</a>
                     </div>
                 </div>
             </li>
