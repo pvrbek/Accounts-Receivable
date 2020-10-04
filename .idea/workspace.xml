@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71e43f2a-c409-459d-8e46-1e0993ffb762" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.cache/1f/5f881d5e6ebbc1cf522e5475747d29.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/1f/5f881d5e6ebbc1cf522e5475747d29.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/59/c1053e228bb0393e5d85088ef61b49.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/59/c1053e228bb0393e5d85088ef61b49.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/b2/641e92e1f35dd5598991a422bdc253.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/b2/641e92e1f35dd5598991a422bdc253.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/b5/99d007ba8e8fa72aa4a4486f0b050a.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/b5/99d007ba8e8fa72aa4a4486f0b050a.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/e9/3707d6ab6eeb1ca057eea5b4b0ab0f.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/e9/3707d6ab6eeb1ca057eea5b4b0ab0f.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src.e31bb0bc.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src.e31bb0bc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src.e31bb0bc.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src.e31bb0bc.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/styles.5c8f3eab.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/styles.5c8f3eab.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/styles.5c8f3eab.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/styles.5c8f3eab.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/styles.5c8f3eab.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/styles.5c8f3eab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/styles.5c8f3eab.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/styles.5c8f3eab.js.map" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-378">
-              <caret line="207" column="22" lean-forward="true" selection-start-line="207" selection-start-column="22" selection-end-line="207" selection-end-column="22" />
+            <state relative-caret-position="3417">
+              <caret line="201" column="30" selection-start-line="201" selection-start-column="30" selection-end-line="201" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -55,7 +43,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="215">
@@ -120,6 +108,7 @@
       <find>user</find>
       <find>id</find>
       <find>options</find>
+      <find>disa</find>
     </findStrings>
     <replaceStrings>
       <replace>class=&quot;info&quot; contenteditable=&quot;false&quot;</replace>
@@ -129,6 +118,7 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -150,9 +140,9 @@
         <option value="$PROJECT_DIR$/src/scss/03-objects/input.scss" />
         <option value="$PROJECT_DIR$/src/scss/05-components/list.scss" />
         <option value="$PROJECT_DIR$/src/scss/03-objects/button.scss" />
-        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/src/index.html" />
       </list>
     </option>
   </component>
@@ -180,6 +170,12 @@
               <item name="accounts-receivable" type="b2602c69:ProjectViewProjectNode" />
               <item name="accounts-receivable" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="accounts-receivable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="accounts-receivable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="accounts-receivable" type="b2602c69:ProjectViewProjectNode" />
@@ -287,7 +283,7 @@
       <workItem from="1601583870436" duration="25630000" />
       <workItem from="1601660100816" duration="9802000" />
       <workItem from="1601812020399" duration="13095000" />
-      <workItem from="1601840728856" duration="5449000" />
+      <workItem from="1601840728856" duration="7250000" />
     </task>
     <task id="LOCAL-00001" summary="HTML+CSS + JS changes on: color styles, buttons, input types, pagination, filter, list and utilities + filling data with JS">
       <created>1601846356946</created>
@@ -296,11 +292,25 @@
       <option name="project" value="LOCAL" />
       <updated>1601846356946</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="HTML+CSS + JS changes on: color styles, buttons, input types, pagination, filter, list and utilities + filling data with JS">
+      <created>1601846520739</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601846520739</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Removed old static text elements">
+      <created>1601847953678</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601847953678</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114647000" />
+    <option name="totallyTimeSpent" value="116448000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1719" height="932" extended-state="6" />
@@ -333,7 +343,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="HTML+CSS + JS changes on: color styles, buttons, input types, pagination, filter, list and utilities + filling data with JS" />
-    <option name="LAST_COMMIT_MESSAGE" value="HTML+CSS + JS changes on: color styles, buttons, input types, pagination, filter, list and utilities + filling data with JS" />
+    <MESSAGE value="Removed old static text elements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed old static text elements" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/scss/03-objects/header-logo.scss">
@@ -459,13 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="207" column="22" lean-forward="true" selection-start-line="207" selection-start-column="22" selection-end-line="207" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/05-components/list.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
@@ -473,10 +477,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/infobip-seeklogo.com.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="31" column="71" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3417">
+          <caret line="201" column="30" selection-start-line="201" selection-start-column="30" selection-end-line="201" selection-end-column="30" />
         </state>
       </provider>
     </entry>

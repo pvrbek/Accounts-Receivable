@@ -1,1 +1,0 @@
-{"version":3,"sources":["js/main.js"],"names":["openAdditionalFilter","console","log"],"mappings":"AAAA,SAASA,oBAAT,GAAgC;AAC5B,SAAOC,OAAO,CAACC,GAAR,CAAY,KAAZ,CAAP;AACH;;AACDD,OAAO,CAACC,GAAR,CAAY,MAAZ","file":"main.fb6bbcaf.js","sourceRoot":"..\\src","sourcesContent":["function openAdditionalFilter() {\r\n    return console.log('AHA');\r\n}\r\nconsole.log('AHA1');\r\n"]}
